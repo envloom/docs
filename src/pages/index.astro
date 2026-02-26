@@ -1,0 +1,274 @@
+---
+import '../styles/envloom.css';
+
+const githubRepo = 'https://github.com/envloom/envloom';
+const githubReleases = 'https://github.com/envloom/envloom/releases';
+
+const shell = 'mx-auto max-w-[1180px] px-4 pb-16 pt-4 sm:px-4';
+const panel =
+	'rounded-[20px] border border-border/60 bg-card/85 shadow-xl shadow-black/20 backdrop-blur supports-[backdrop-filter]:bg-card/80';
+const tile = 'rounded-2xl border border-border/60 bg-card/70';
+const navLink =
+	'rounded-xl border border-transparent px-3 py-2 text-sm text-muted-foreground transition hover:border-border/70 hover:bg-background/40 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring';
+const ghostBtn =
+	'inline-flex items-center justify-center gap-2 rounded-xl border border-border/60 bg-background/30 px-4 py-3 text-sm font-semibold text-foreground transition hover:-translate-y-px hover:border-primary/40 hover:bg-primary/8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring';
+const primaryBtn =
+	'inline-flex items-center justify-center gap-2 rounded-xl border border-primary/60 bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition hover:-translate-y-px hover:bg-[color:color-mix(in_oklab,var(--primary)_90%,white)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Envloom | Local Development Stack Manager</title>
+		<meta
+			name="description"
+			content="Envloom is a local development stack manager with versioned runtimes, local SSL, per-site configuration, systray controls, logs, and a developer-friendly CLI."
+			
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<link rel="canonical" href="https://envloom.dev/" />
+		<meta property="og:title" content="Envloom | Local Development Stack Manager" />
+		<meta
+			property="og:description"
+			content="Versioned PHP and Node, plus local MariaDB and Nginx services. Per-site runtime selection, local SSL, systray actions, logs, and CLI workflows."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://envloom.dev/" />
+		<meta property="og:image" content="https://envloom.dev/og/envloom-default.svg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="https://envloom.dev/og/envloom-default.svg" />
+	</head>
+	<body
+		class="min-h-dvh bg-background text-foreground [background:radial-gradient(circle_at_14%_10%,color-mix(in_oklab,var(--primary)_14%,transparent),transparent_48%),radial-gradient(circle_at_88%_12%,color-mix(in_oklab,var(--accent)_16%,transparent),transparent_52%),linear-gradient(180deg,color-mix(in_oklab,var(--background)_98%,black)_0%,var(--background)_58%,color-mix(in_oklab,var(--background)_92%,black)_100%)]"
+	>
+		<div class={shell}>
+			<header
+				class="sticky top-1 z-20 mt-1 flex flex-col gap-4 rounded-2xl border border-border/60 bg-background/55 p-4 backdrop-blur md:flex-row md:items-center md:justify-between"
+				aria-label="Primary navigation"
+			>
+				<a class="flex items-center gap-3 text-base font-bold tracking-tight" href="/">
+					<img src="/logo.svg" alt="" class="h-16" />
+					<!--<span class="text-xl text-primary">Envloom</span>-->
+				</a>
+				<nav class="flex w-full flex-wrap items-center gap-2 md:w-auto md:justify-end" aria-label="Sections">
+					<a class={navLink} href="#features">Features</a>
+					<a class={navLink} href="#workflow">Workflow</a>
+					<a class={navLink} href="/docs/">Docs</a>
+					<a class={navLink} href={githubRepo} target="_blank" rel="noreferrer">GitHub</a>
+				</nav>
+			</header>
+
+			<main>
+				<section class="grid grid-cols-1 items-stretch gap-5 py-8 lg:grid-cols-[1.15fr_0.85fr]">
+					<div class={`${panel} p-6 sm:p-7`}>
+						<span
+							class="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1.5 text-xs font-medium text-foreground"
+						>
+							Local stack control without the daily friction
+						</span>
+						<h1 class="mt-4 text-balance text-4xl font-bold leading-none tracking-tight sm:text-5xl lg:text-6xl">
+							Run your local stack and versioned runtimes from one place.
+						</h1>
+						<p class="mt-3 max-w-[62ch] text-base leading-7 text-muted-foreground">
+							Envloom manages your local development stack with runtime versions, per-site config,
+							local SSL, Nginx vhosts, hosts sync, logs, systray actions, and a CLI that fits into
+							real developer workflows.
+						</p>
+
+						<div class="mt-4 flex flex-wrap gap-3" role="group" aria-label="Primary actions">
+							<a class={primaryBtn} href={githubReleases} target="_blank" rel="noreferrer"
+								>Download</a
+							>
+							<a class={ghostBtn} href="/docs/">Docs</a>
+							<a class={ghostBtn} href={githubRepo} target="_blank" rel="noreferrer">GitHub</a>
+						</div>
+
+						<div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3" aria-label="Product highlights">
+							<div class={`${tile} p-3`}>
+								<strong class="mb-1 block text-xs font-semibold tracking-wide text-foreground"
+									>Versioned runtimes</strong
+								>
+								<span class="text-xs leading-5 text-muted-foreground"
+									>PHP and Node version switching, plus integrated MariaDB and Nginx services.</span
+								>
+							</div>
+							<div class={`${tile} p-3`}>
+								<strong class="mb-1 block text-xs font-semibold tracking-wide text-foreground"
+									>Per-site behavior</strong
+								>
+								<span class="text-xs leading-5 text-muted-foreground"
+									>Set runtime choices and local SSL behavior at the site level.</span
+								>
+							</div>
+							<div class={`${tile} p-3`}>
+								<strong class="mb-1 block text-xs font-semibold tracking-wide text-foreground"
+									>Operational visibility</strong
+								>
+								<span class="text-xs leading-5 text-muted-foreground"
+									>Systray controls and logs viewer for quick debugging.</span
+								>
+							</div>
+						</div>
+					</div>
+
+					<div class={`${panel} grid gap-3 p-4`} aria-label="Product workflow preview">
+						<div class={`${tile} p-4`}>
+							<h3 class="mb-2 text-sm font-semibold tracking-tight text-foreground">
+								CLI (loom) for fast context checks
+							</h3>
+							<pre
+								class="overflow-auto rounded-xl border border-border/60 bg-black/35 p-3 font-mono text-xs leading-6 text-foreground"
+							><code>loom current
+loom list php
+loom php 8.5
+loom node 22
+loom ssl on</code></pre>
+						</div>
+						<div class={`${tile} p-4`}>
+							<h3 class="mb-2 text-sm font-semibold tracking-tight text-foreground">
+								Runtime + site coordination
+							</h3>
+							<pre
+								class="overflow-auto rounded-xl border border-border/60 bg-black/35 p-3 font-mono text-xs leading-6 text-foreground"
+							><code>Current: PHP 8.5, Node 22, Nginx 1.27, MariaDB 11.x
+Site: app.test
+  php: 8.4 (per-site override)
+  ssl: enabled
+  status: linked</code></pre>
+						</div>
+						<div class={`${tile} p-4`}>
+							<h3 class="mb-2 text-sm font-semibold tracking-tight text-foreground">
+								What Envloom handles
+							</h3>
+							<ul class="ml-4 list-disc space-y-1 text-sm leading-6 text-muted-foreground">
+								<li>Local CA and HTTPS certificates</li>
+								<li>Nginx vhosts + hosts file sync</li>
+								<li>Systray quick actions (start/stop/reload)</li>
+								<li>Runtime and service logs in one viewer</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section id="features" class={`${panel} mt-5 p-4 sm:p-5`}>
+					<h2 class="text-balance text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+						Designed for local environments that need to stay predictable.
+					</h2>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						Envloom focuses on repeatable developer workflows: pick a runtime version, link a site,
+						enable HTTPS, and keep diagnostics nearby. It is built to reduce manual glue work between
+						services and project-specific needs.
+					</p>
+
+					<div class="mt-4 grid grid-cols-12 gap-4">
+						<article class="col-span-12 rounded-2xl border border-border/60 bg-card/70 p-4 lg:col-span-6">
+							<h3 class="text-base font-semibold tracking-tight text-foreground">Runtimes</h3>
+							<p class="mt-1 text-sm leading-6 text-muted-foreground">
+								Manage PHP and Node versions (via NVM for Node) with a clear current selection and
+								local shims in <code>bin</code>, while keeping MariaDB and Nginx in the same stack
+								workflow.
+							</p>
+						</article>
+						<article class="col-span-12 rounded-2xl border border-border/60 bg-card/70 p-4 lg:col-span-6">
+							<h3 class="text-base font-semibold tracking-tight text-foreground">Sites</h3>
+							<p class="mt-1 text-sm leading-6 text-muted-foreground">
+								Define local sites, sync hosts entries, generate Nginx vhosts, and set per-site PHP
+								versions when projects require different runtime baselines.
+							</p>
+						</article>
+						<article class="col-span-12 rounded-2xl border border-border/60 bg-card/70 p-4 lg:col-span-6">
+							<h3 class="text-base font-semibold tracking-tight text-foreground">Systray</h3>
+							<p class="mt-1 text-sm leading-6 text-muted-foreground">
+								Use quick actions for service start/stop/reload, runtime switching, and opening local
+								site links without leaving your current workflow.
+							</p>
+						</article>
+						<article class="col-span-12 rounded-2xl border border-border/60 bg-card/70 p-4 lg:col-span-6">
+							<h3 class="text-base font-semibold tracking-tight text-foreground">Logs</h3>
+							<p class="mt-1 text-sm leading-6 text-muted-foreground">
+								Inspect runtime, PHP, Nginx, and MariaDB logs in one place to debug local issues
+								faster during setup and day-to-day development.
+							</p>
+						</article>
+						<article class="col-span-12 rounded-2xl border border-border/60 bg-card/70 p-4">
+							<h3 class="text-base font-semibold tracking-tight text-foreground">
+								CLI-first where it matters
+							</h3>
+							<p class="mt-1 text-sm leading-6 text-muted-foreground">
+								The <code>loom</code> command exposes practical shortcuts for checking current
+								versions, listing runtimes, switching PHP/Node, linking PHP shims, and toggling local
+								SSL. It complements the UI instead of duplicating it.
+							</p>
+						</article>
+					</div>
+
+					<p class="mt-4 rounded-xl border border-primary/25 bg-primary/10 px-4 py-3 text-sm leading-6 text-foreground">
+						<strong>Platform availability:</strong> Envloom is available on Windows today. The docs and
+						wording are kept platform-friendly because the product direction is broader than a single OS.
+					</p>
+				</section>
+
+				<section id="workflow" class={`${panel} mt-5 p-4 sm:p-5`}>
+					<h2 class="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+						Typical setup flow
+					</h2>
+					<p class="mt-2 text-base leading-7 text-muted-foreground">
+						A practical first pass is: install Envloom, complete the initial local CA/hosts setup, pick
+						runtime versions, and start linking sites with per-project overrides only when needed.
+					</p>
+					<div class="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
+						<div class="rounded-2xl border border-border/60 bg-card/70 p-4">
+							<span
+								class="mb-2 inline-flex size-7 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary"
+								>1</span
+							>
+							<h3 class="text-sm font-semibold tracking-tight text-foreground">Install + first launch</h3>
+							<p class="mt-1 text-sm leading-6 text-muted-foreground">
+								Run Envloom, allow the required local system changes for hosts and certificates, and
+								verify services are healthy.
+							</p>
+						</div>
+						<div class="rounded-2xl border border-border/60 bg-card/70 p-4">
+							<span
+								class="mb-2 inline-flex size-7 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary"
+								>2</span
+							>
+							<h3 class="text-sm font-semibold tracking-tight text-foreground">Select runtimes</h3>
+							<p class="mt-1 text-sm leading-6 text-muted-foreground">
+								Choose default PHP/Node versions for your machine, then use project-level overrides
+								when a site needs a different PHP version.
+							</p>
+						</div>
+						<div class="rounded-2xl border border-border/60 bg-card/70 p-4">
+							<span
+								class="mb-2 inline-flex size-7 items-center justify-center rounded-full bg-primary/15 text-xs font-bold text-primary"
+								>3</span
+							>
+							<h3 class="text-sm font-semibold tracking-tight text-foreground">
+								Link sites + enable HTTPS
+							</h3>
+							<p class="mt-1 text-sm leading-6 text-muted-foreground">
+								Create site entries, sync vhosts/hosts, enable local SSL, and use systray or CLI
+								commands for fast operations.
+							</p>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-border/60 bg-background/50 p-5 backdrop-blur">
+				<p class="text-sm leading-6 text-foreground/75">
+					Envloom docs are built with Astro + Starlight. Placeholder logo/OG assets included until final
+					brand files are available.
+				</p>
+				<div class="flex flex-wrap gap-2">
+					<a class={ghostBtn} href="/docs/">Documentation</a>
+					<a class={ghostBtn} href="/docs/getting-started/install/">Install</a>
+					<a class={ghostBtn} href={githubRepo} target="_blank" rel="noreferrer">GitHub</a>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

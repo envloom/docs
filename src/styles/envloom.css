@@ -1,0 +1,380 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+	--background: oklch(0.9528 0.0086 84.5731);
+	--foreground: oklch(0.2788 0.0226 243.3501);
+	--card: oklch(0.9850 0.0041 91.4457);
+	--card-foreground: oklch(0.2788 0.0226 243.3501);
+	--popover: oklch(0.9850 0.0041 91.4457);
+	--popover-foreground: oklch(0.2788 0.0226 243.3501);
+	--primary: oklch(0.5192 0.0941 176.4016);
+	--primary-foreground: oklch(0.9850 0.0041 91.4457);
+	--secondary: oklch(0.9560 0.0115 84.5787);
+	--secondary-foreground: oklch(0.2788 0.0226 243.3501);
+	--muted: oklch(0.9560 0.0115 84.5787);
+	--muted-foreground: oklch(0.5178 0.0185 239.3879);
+	--accent: oklch(0.9560 0.0115 84.5787);
+	--accent-foreground: oklch(0.4353 0.0782 176.5551);
+	--destructive: oklch(0.6264 0.1111 86.9248);
+	--destructive-foreground: oklch(0.9850 0.0041 91.4457);
+	--border: oklch(0.8683 0.0134 82.4010);
+	--input: oklch(0.8683 0.0134 82.4010);
+	--ring: oklch(0.5192 0.0941 176.4016);
+	--chart-1: oklch(0.5192 0.0941 176.4016);
+	--chart-2: oklch(0.6049 0.1481 152.6775);
+	--chart-3: oklch(0.6264 0.1111 86.9248);
+	--chart-4: oklch(0.4353 0.0782 176.5551);
+	--chart-5: oklch(0.5178 0.0185 239.3879);
+	--sidebar: oklch(0.9850 0.0041 91.4457);
+	--sidebar-foreground: oklch(0.2788 0.0226 243.3501);
+	--sidebar-primary: oklch(0.5192 0.0941 176.4016);
+	--sidebar-primary-foreground: oklch(0.9850 0.0041 91.4457);
+	--sidebar-accent: oklch(0.9560 0.0115 84.5787);
+	--sidebar-accent-foreground: oklch(0.5192 0.0941 176.4016);
+	--sidebar-border: oklch(0.8683 0.0134 82.4010);
+	--sidebar-ring: oklch(0.5192 0.0941 176.4016);
+	--font-sans: "Segoe UI", "Trebuchet MS", sans-serif;
+	--font-serif: Georgia, serif;
+	--font-mono: monospace;
+	--radius: 0.5rem;
+	--shadow-2xs: 0px 2px 10px 0px hsl(0 0 0 / 0.03);
+	--shadow-xs: 0px 2px 10px 0px hsl(0 0 0 / 0.03);
+	--shadow-sm: 0px 2px 10px 0px hsl(0 0 0 / 0.05), 0px 1px 2px -1px hsl(0 0 0 / 0.05);
+	--shadow: 0px 2px 10px 0px hsl(0 0 0 / 0.05), 0px 1px 2px -1px hsl(0 0 0 / 0.05);
+	--shadow-md: 0px 2px 10px 0px hsl(0 0 0 / 0.05), 0px 2px 4px -1px hsl(0 0 0 / 0.05);
+	--shadow-lg: 0px 2px 10px 0px hsl(0 0 0 / 0.05), 0px 4px 6px -1px hsl(0 0 0 / 0.05);
+	--shadow-xl: 0px 2px 10px 0px hsl(0 0 0 / 0.05), 0px 8px 10px -1px hsl(0 0 0 / 0.05);
+	--shadow-2xl: 0px 2px 10px 0px hsl(0 0 0 / 0.13);
+	--tracking-normal: 0px;
+	--spacing: 0.25rem;
+}
+
+.dark,
+[data-theme='dark'] {
+	--background: oklch(0.2788 0.0226 243.3501);
+	--foreground: oklch(0.9528 0.0086 84.5731);
+	--card: oklch(0.3298 0.0261 244.2217);
+	--card-foreground: oklch(0.9850 0.0041 91.4457);
+	--popover: oklch(0.3298 0.0261 244.2217);
+	--popover-foreground: oklch(0.9850 0.0041 91.4457);
+	--primary: oklch(0.5192 0.0941 176.4016);
+	--primary-foreground: oklch(0.9850 0.0041 91.4457);
+	--secondary: oklch(0.3535 0.0312 237.9772);
+	--secondary-foreground: oklch(0.9850 0.0041 91.4457);
+	--muted: oklch(0.3535 0.0312 237.9772);
+	--muted-foreground: oklch(0.8683 0.0134 82.4010);
+	--accent: oklch(0.4353 0.0782 176.5551);
+	--accent-foreground: oklch(0.9850 0.0041 91.4457);
+	--destructive: oklch(0.6264 0.1111 86.9248);
+	--destructive-foreground: oklch(0.9850 0.0041 91.4457);
+	--border: oklch(0.3535 0.0312 237.9772);
+	--input: oklch(0.3535 0.0312 237.9772);
+	--ring: oklch(0.5192 0.0941 176.4016);
+	--chart-1: oklch(0.5192 0.0941 176.4016);
+	--chart-2: oklch(0.6049 0.1481 152.6775);
+	--chart-3: oklch(0.6264 0.1111 86.9248);
+	--chart-4: oklch(0.4353 0.0782 176.5551);
+	--chart-5: oklch(0.5178 0.0185 239.3879);
+	--sidebar: oklch(0.2788 0.0226 243.3501);
+	--sidebar-foreground: oklch(0.9528 0.0086 84.5731);
+	--sidebar-primary: oklch(0.5192 0.0941 176.4016);
+	--sidebar-primary-foreground: oklch(0.9850 0.0041 91.4457);
+	--sidebar-accent: oklch(0.3535 0.0312 237.9772);
+	--sidebar-accent-foreground: oklch(0.9850 0.0041 91.4457);
+	--sidebar-border: oklch(0.3535 0.0312 237.9772);
+	--sidebar-ring: oklch(0.5192 0.0941 176.4016);
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--color-sidebar: var(--sidebar);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
+	--font-sans: var(--font-sans);
+	--font-mono: var(--font-mono);
+	--font-serif: var(--font-serif);
+	--radius-lg: var(--radius);
+	--shadow-sm: var(--shadow-sm);
+	--shadow: var(--shadow);
+	--shadow-md: var(--shadow-md);
+	--shadow-lg: var(--shadow-lg);
+	--shadow-xl: var(--shadow-xl);
+	--shadow-2xl: var(--shadow-2xl);
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	* {
+		@apply border-border outline-ring/50;
+	}
+
+	body {
+		@apply bg-background text-foreground;
+		letter-spacing: var(--tracking-normal);
+	}
+}
+
+html,
+body {
+	font-family: var(--font-sans);
+}
+
+code,
+pre,
+kbd,
+.mono {
+	font-family: var(--font-mono);
+}
+
+/* Starlight theme overrides */
+:root {
+	--sl-font: var(--font-sans);
+	--sl-font-mono: var(--font-mono);
+	--sl-color-bg: var(--background);
+	--sl-color-bg-nav: color-mix(in oklab, var(--background) 90%, transparent);
+	--sl-color-bg-sidebar: var(--sidebar);
+	--sl-color-bg-inline-code: color-mix(in oklab, var(--secondary) 72%, var(--card));
+	--sl-color-text: var(--foreground);
+	--sl-color-text-accent: var(--accent-foreground);
+	--sl-color-text-invert: var(--primary-foreground);
+	--sl-color-text-muted: var(--muted-foreground);
+	--sl-color-hairline: color-mix(in oklab, var(--border) 75%, transparent);
+	--sl-color-accent-low: color-mix(in oklab, var(--primary) 18%, var(--background));
+	--sl-color-accent: var(--primary);
+	--sl-color-accent-high: var(--accent-foreground);
+	--sl-color-white: oklch(0.995 0 0);
+	--sl-color-gray-1: color-mix(in oklab, var(--foreground) 98%, white);
+	--sl-color-gray-2: color-mix(in oklab, var(--foreground) 84%, white);
+	--sl-color-gray-3: color-mix(in oklab, var(--foreground) 62%, white);
+	--sl-color-gray-4: color-mix(in oklab, var(--muted-foreground) 85%, var(--background));
+	--sl-color-gray-5: color-mix(in oklab, var(--muted-foreground) 58%, var(--background));
+	--sl-color-gray-6: color-mix(in oklab, var(--foreground) 24%, var(--background));
+	--sl-color-black: oklch(0.14 0.01 240);
+}
+
+header.header,
+.header {
+	backdrop-filter: blur(14px);
+}
+
+.hero {
+	position: relative;
+}
+
+.hero::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(circle at 15% 15%, rgba(34, 211, 238, 0.14), transparent 42%),
+		radial-gradient(circle at 85% 10%, rgba(34, 197, 94, 0.2), transparent 48%);
+	pointer-events: none;
+}
+
+.pagination-links a,
+.sidebar-pane,
+.starlight-aside,
+.sl-markdown-content table {
+	border-radius: 14px;
+}
+
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3 {
+	letter-spacing: -0.02em;
+}
+
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4,
+.hero h1,
+.hero h2 {
+	color: color-mix(in oklab, var(--foreground) 96%, black);
+}
+
+.sl-markdown-content h1 {
+	font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.sl-markdown-content a {
+	text-underline-offset: 0.18em;
+}
+
+.site-title {
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: color-mix(in oklab, var(--foreground) 96%, black);
+}
+
+/* Tailwind Preflight resets list styles; restore them for Starlight Markdown content */
+.sl-markdown-content ul,
+.sl-markdown-content ol {
+	padding-inline-start: 1.25rem;
+	margin-block: 1rem;
+}
+
+.sl-markdown-content ul {
+	list-style: disc;
+}
+
+.sl-markdown-content ol {
+	list-style: decimal;
+}
+
+.sl-markdown-content li + li {
+	margin-top: 0.25rem;
+}
+
+.sl-markdown-content ul ul {
+	list-style: circle;
+}
+
+.sl-markdown-content ol ol {
+	list-style: lower-alpha;
+}
+
+[data-theme='light'] .sl-markdown-content h1,
+[data-theme='light'] .sl-markdown-content h2,
+[data-theme='light'] .sl-markdown-content h3,
+[data-theme='light'] .sl-markdown-content h4,
+[data-theme='light'] .hero h1,
+[data-theme='light'] .hero h2,
+[data-theme='light'] .site-title {
+	color: oklch(0.22 0.02 243);
+}
+
+/* Starlight sidebar hover/current text defaults are too light in light mode */
+[data-theme='light'] .sidebar .large,
+[data-theme='light'] .sidebar summary,
+[data-theme='light'] .sidebar a:hover,
+[data-theme='light'] .sidebar a:focus {
+	color: oklch(0.24 0.02 243);
+}
+
+[data-theme='light'] .sidebar a:hover,
+[data-theme='light'] .sidebar a:focus {
+	background: color-mix(in oklab, var(--sidebar-accent) 88%, white);
+}
+
+[data-theme='light'] .sidebar [aria-current='page'],
+[data-theme='light'] .sidebar [aria-current='page']:hover,
+[data-theme='light'] .sidebar [aria-current='page']:focus {
+	color: oklch(0.9850 0.0041 91.4457);
+	background-color: var(--sidebar-primary);
+}
+
+/* Starlight page title + TOC heading also default to white in light mode */
+[data-theme='light'] #starlight__main h1,
+[data-theme='light'] h1#_top,
+[data-theme='light'] .right-sidebar-panel h2,
+[data-theme='light'] h2#starlight__on-this-page,
+[data-theme='light'] #starlight__on-this-page--mobile,
+[data-theme='light'] #starlight__mobile-toc .display-current {
+	color: oklch(0.22 0.02 243) !important;
+}
+
+[data-theme='light'] #starlight__mobile-toc .toggle {
+	background-color: var(--card);
+	border-color: color-mix(in oklab, var(--border) 90%, transparent);
+	color: oklch(0.24 0.02 243);
+}
+
+[data-theme='light'] #starlight__mobile-toc details .toggle:hover,
+[data-theme='light'] #starlight__mobile-toc details[open] .toggle {
+	color: oklch(0.22 0.02 243);
+	border-color: var(--sidebar-primary);
+}
+
+/* Starlight search uses dark panel colors by default; normalize in light mode */
+[data-theme='light'] site-search button[data-open-modal] {
+	background-color: var(--card);
+	border-color: color-mix(in oklab, var(--border) 92%, transparent);
+	color: var(--muted-foreground);
+}
+
+[data-theme='light'] site-search button[data-open-modal]:hover {
+	background-color: color-mix(in oklab, var(--secondary) 75%, white);
+	border-color: var(--sidebar-primary);
+	color: oklch(0.22 0.02 243);
+}
+
+[data-theme='light'] site-search button[data-open-modal] > kbd {
+	background-color: color-mix(in oklab, var(--secondary) 55%, white);
+	color: var(--foreground);
+}
+
+[data-theme='light'] site-search dialog {
+	background-color: var(--card);
+	border-color: color-mix(in oklab, var(--border) 90%, transparent);
+}
+
+[data-theme='light'] #starlight__search {
+	--pagefind-ui-primary: var(--foreground);
+	--pagefind-ui-text: var(--foreground);
+	--pagefind-ui-background: var(--card);
+	--pagefind-ui-border: color-mix(in oklab, var(--border) 92%, transparent);
+	--pagefind-ui-tag: color-mix(in oklab, var(--secondary) 78%, white);
+}
+
+[data-theme='light'] #starlight__search .pagefind-ui__form::before,
+[data-theme='light'] #starlight__search .pagefind-ui__search-clear,
+[data-theme='light'] #starlight__search .pagefind-ui__message,
+[data-theme='light'] #starlight__search .pagefind-ui__result-link,
+[data-theme='light'] #starlight__search .pagefind-ui__result-nested {
+	color: var(--foreground);
+}
+
+[data-theme='light'] #starlight__search .pagefind-ui__drawer,
+[data-theme='light'] #starlight__search .pagefind-ui__results,
+[data-theme='light'] #starlight__search .pagefind-ui__result,
+[data-theme='light'] #starlight__search .pagefind-ui__search-input {
+	background-color: var(--card);
+	border-color: color-mix(in oklab, var(--border) 92%, transparent);
+}
+
+/* Bottom prev/next docs navigation */
+[data-theme='light'] .pagination-links a {
+	background-color: var(--card);
+	border-color: color-mix(in oklab, var(--border) 92%, transparent);
+	color: var(--muted-foreground);
+}
+
+[data-theme='light'] .pagination-links a:hover,
+[data-theme='light'] .pagination-links a:focus-visible {
+	background-color: color-mix(in oklab, var(--secondary) 72%, white);
+	border-color: var(--sidebar-primary);
+	color: oklch(0.24 0.02 243);
+}
+
+[data-theme='light'] .pagination-links a .link-title {
+	color: oklch(0.22 0.02 243) !important;
+}

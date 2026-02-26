@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050c18"/>
+      <stop offset="1" stop-color="#0b1324"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientTransform="translate(250 120) rotate(12) scale(480 260)">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientTransform="translate(980 90) rotate(-8) scale(420 240)">
+      <stop offset="0" stop-color="#22c55e" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <g transform="translate(84 84)">
+    <rect width="96" height="96" rx="24" fill="#07101f" stroke="#223047"/>
+    <path d="M24 27h48v10H38v21h26v10H24V27z" fill="url(#brand)"/>
+    <path d="M42 43h30v10H56v15H42V43z" fill="#e2e8f0" opacity=".95"/>
+  </g>
+
+  <text x="200" y="150" fill="#e6edf6" font-size="64" font-weight="700" font-family="IBM Plex Sans, Arial, sans-serif">Envloom</text>
+  <text x="84" y="245" fill="#d7e0ed" font-size="48" font-weight="600" font-family="IBM Plex Sans, Arial, sans-serif">
+    Local development stack manager
+  </text>
+  <text x="84" y="312" fill="#9fb0c9" font-size="28" font-family="IBM Plex Sans, Arial, sans-serif">
+    Versioned runtimes • local SSL • per-site config • systray • logs • CLI
+  </text>
+
+  <g transform="translate(84 366)" font-family="JetBrains Mono, monospace" font-size="24">
+    <rect width="1032" height="180" rx="20" fill="#060d18" stroke="#233247"/>
+    <text x="34" y="52" fill="#cbd7e6">❯ loom current</text>
+    <text x="34" y="92" fill="#98a8be">PHP 8.5 • Node 22 • Nginx 1.27 • MariaDB 11.x</text>
+    <text x="34" y="132" fill="#cbd7e6">❯ loom php 8.5</text>
+    <text x="34" y="172" fill="#cbd7e6">❯ loom ssl on</text>
+    <circle cx="986" cy="42" r="8" fill="#22c55e"/>
+    <text x="1004" y="50" fill="#98a8be" font-size="18">Placeholder OG image (replace with product screenshot later)</text>
+  </g>
+</svg>

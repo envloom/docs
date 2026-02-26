@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="56" rx="14" fill="#050c18"/>
+  <rect x="6" y="6" width="44" height="44" rx="12" fill="#07101f" stroke="#1e293b"/>
+  <path d="M17 18h22v6H24v10h12v6H17V18z" fill="url(#g)"/>
+  <path d="M26 25h13v6h-7v9h-6V25z" fill="#e2e8f0" opacity=".95"/>
+  <text x="60" y="36" font-size="24" font-weight="700" font-family="IBM Plex Sans, Arial, sans-serif" fill="#e5eef9">Envloom</text>
+</svg>
