@@ -8,16 +8,21 @@ export default defineConfig({
 	site: 'https://envloom.dev',
 	server: {
 		port: 3000,
-		host: true
+		host: true,
+		allowedHosts: ['envloom.dev'],
 	},
 	vite: {
 		plugins: [tailwindcss()],
 		ssr: {
 			noExternal: ['path-to-regexp'],
 		},
+		server: {
+			allowedHosts: ['envloom.dev'],
+		},
 		preview: {
 			port: 3000,
-			host: true
+			host: true,
+			allowedHosts: ['envloom.dev'],
 		}
 	},
 	integrations: [
