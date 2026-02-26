@@ -6,8 +6,19 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://envloom.dev',
+	server: {
+		port: 3000,
+		host: true
+	},
 	vite: {
 		plugins: [tailwindcss()],
+		ssr: {
+			noExternal: ['path-to-regexp'],
+		},
+		preview: {
+			port: 3000,
+			host: true
+		}
 	},
 	integrations: [
 		starlight({
