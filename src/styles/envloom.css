@@ -488,3 +488,6 @@ header.header,
 .sl-markdown-content img {
 	margin-inline: auto;
 }
+.expressive-code pre {
+	background: var(--ec-codeBg) !important;
+}

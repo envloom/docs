@@ -1,5 +1,6 @@
 ---
 import '../styles/envloom.css';
+import {Code} from '@astrojs/starlight/components';
 
 const githubRepo = 'https://github.com/envloom/envloom';
 const githubReleases = 'https://github.com/envloom/envloom/releases';
@@ -118,25 +119,27 @@ const primaryBtn =
 							<h3 class="mb-2 text-sm font-semibold tracking-tight text-foreground">
 								CLI (loom) for fast context checks
 							</h3>
-							<pre
-								class="overflow-auto rounded-xl border border-border/60 bg-black/35 p-3 font-mono text-xs leading-6 text-foreground"
-							><code>loom current
+							<Code
+								lang="bash"
+								code={`loom current
 loom list php
 loom php 8.5
 loom node 22
-loom ssl on</code></pre>
+loom ssl on`}
+							/>
 						</div>
 						<div class={`${tile} p-4`}>
 							<h3 class="mb-2 text-sm font-semibold tracking-tight text-foreground">
 								Runtime + site coordination
 							</h3>
-							<pre
-								class="overflow-auto rounded-xl border border-border/60 bg-black/35 p-3 font-mono text-xs leading-6 text-foreground"
-							><code>Current: PHP 8.5, Node 22, Nginx 1.27, MariaDB 11.x
+							<Code
+								lang="text"
+								code={`Current: PHP 8.5, Node 22, Nginx 1.27, MariaDB 11.x
 Site: app.test
   php: 8.4 (per-site override)
   ssl: enabled
-  status: linked</code></pre>
+  status: linked`}
+							/>
 						</div>
 						<div class={`${tile} p-4`}>
 							<h3 class="mb-2 text-sm font-semibold tracking-tight text-foreground">
